@@ -15,6 +15,7 @@ func main() {
 
 	defer f.Close()
 
+	// Writing File
 	_, err = f.WriteString("absdlkfj \n")
 
 	if err != nil {
