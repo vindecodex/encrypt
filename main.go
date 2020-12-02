@@ -7,8 +7,8 @@ import (
 )
 
 func main() {
+	// Create File
 	f, err := os.Create("sample.enc")
-
 	if err != nil {
 		log.Fatal(err)
 	}
