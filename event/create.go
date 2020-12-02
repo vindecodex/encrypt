@@ -4,7 +4,7 @@ import "os"
 
 // Create File
 func Create(name string) error {
-	f, err := os.Create("sample.t")
+	f, err := os.Create("sample.ta")
 	if err != nil {
 		return err
 	}
