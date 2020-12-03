@@ -12,9 +12,15 @@ func main() {
 		log.Println(err)
 	}
 
-	val, err := event.Write(f, "aaa")
+	_, err = event.Write(f, "aaa")
 	if err != nil {
 		log.Println(err)
 	}
+
+	val, err := event.Read("./hello.enc")
+	if err != nil {
+		log.Println(err)
+	}
+
 	fmt.Println(val)
 }
