@@ -8,5 +8,6 @@ func Write(f *os.File, value string) (string, error) {
 	if err != nil {
 		return value, err
 	}
+	defer f.Close()
 	return value, nil
 }
