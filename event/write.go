@@ -1,10 +1,12 @@
 package event
 
+import "os"
+
 // Write File
-func Write(value string) (bool, error) {
+func Write(f *os.File, value string) (string, error) {
 	_, err := f.WriteString(value)
 	if err != nil {
-		return false, err
+		return value, err
 	}
-	return true, nil
+	return value, nil
 }
