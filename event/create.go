@@ -3,11 +3,11 @@ package event
 import "os"
 
 // Create File
-func Create(name string) error {
+func Create(name string) (*os.File, error) {
 	f, err := os.Create("sample.t30")
 	if err != nil {
-		return err
+		return nil, err
 	}
 	defer f.Close()
-	return nil
+	return f, nil
 }
