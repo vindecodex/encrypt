@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	data := "Hello, World! New World! Lorem Ipsum"
+	data := "Hello, World! New World! Lorem Ipsum!"
 	passphrase := "secret"
 	fileName := "test"
 	f, err := event.Create(fileName)
