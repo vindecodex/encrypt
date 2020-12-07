@@ -17,7 +17,7 @@ func createHash(key string) string {
 }
 
 // Encrypt data with our passphrase
-func Encrypt(data []byte, passphrase string) []byte {
+func encrypt(data []byte, passphrase string) []byte {
 	block, _ := aes.NewCipher([]byte(createHash(passphrase)))
 	gcm, err := cipher.NewGCM(block)
 	if err != nil {
@@ -32,7 +32,7 @@ func Encrypt(data []byte, passphrase string) []byte {
 }
 
 // Decrypt data with our passphrase
-func Decrypt(data []byte, passphrase string) []byte {
+func decrypt(data []byte, passphrase string) []byte {
 	key := []byte(createHash(passphrase))
 	block, err := aes.NewCipher(key)
 	if err != nil {
