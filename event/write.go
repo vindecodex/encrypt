@@ -3,8 +3,8 @@ package event
 import "os"
 
 // Write File
-func Write(f *os.File, value string) (string, error) {
-	_, err := f.WriteString(value)
+func Write(f *os.File, value []byte) ([]byte, error) {
+	_, err := f.WriteString(string(value))
 	if err != nil {
 		return value, err
 	}
