@@ -6,7 +6,7 @@ import (
 	"log"
 )
 
-func main() {
+func main() 
 	data := "Hello, World! New World! Lorem Ipsum!"
 	passphrase := "secret"
 	fileName := "test"
