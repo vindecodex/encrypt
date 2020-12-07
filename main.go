@@ -6,8 +6,8 @@ import (
 	"log"
 )
 
-func main() {
-	data := "Hello, World!"
+func main() 
+	data := "Hello, World! New World! Lorem Ipsum!"
 	passphrase := "secret"
 	fileName := "test"
 	f, err := event.Create(fileName)
