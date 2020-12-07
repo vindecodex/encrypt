@@ -9,7 +9,8 @@ import (
 func main() {
 	data := "Hello, World!"
 	passphrase := "secret"
-	f, err := event.Create("hello")
+	fileName := "test"
+	f, err := event.Create(fileName)
 	if err != nil {
 		log.Println(err)
 	}
