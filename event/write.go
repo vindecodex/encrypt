@@ -3,11 +3,11 @@ package event
 import "os"
 
 // Write File
-func Write(f *os.File, value string) (string, error) {
+func Write(f *os.File, value string) ([]byte, error) {
 	_, err := f.WriteString(value)
 	if err != nil {
-		return value, err
+		return []byte(value), err
 	}
 	defer f.Close()
-	return value, nil
+	return []byte(value), nil
 }
