@@ -20,7 +20,7 @@ func main() {
 		log.Println(err)
 	}
 
-	val, err := event.Read("./hello.enc")
+	val, err := event.Read("./test.enc")
 	if err != nil {
 		log.Println(err)
 	}
