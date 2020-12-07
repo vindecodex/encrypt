@@ -7,12 +7,14 @@ import (
 )
 
 func main() {
+	data := "Hello, World!"
+	passphrase := "secret"
 	f, err := event.Create("hello")
 	if err != nil {
 		log.Println(err)
 	}
 
-	_, err = event.Write(f, "aaa")
+	_, err = event.Write(f, event.Encrypt([]byte(data), passphrase))
 	if err != nil {
 		log.Println(err)
 	}
