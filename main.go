@@ -25,5 +25,5 @@ func main()
 		log.Println(err)
 	}
 
-	fmt.Println(val)
+	fmt.Println("\x1b[31m", val)
 }
