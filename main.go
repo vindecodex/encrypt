@@ -18,7 +18,6 @@ func init() {
 	colors.Blue("                                          GGG GGG             ")
 	colors.Blue("                                     YGb dGGP GGG             ")
 	colors.Blue("                                       YGGP   GGG             ")
-
 }
 
 func main() {
