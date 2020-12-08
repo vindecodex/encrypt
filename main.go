@@ -1,8 +1,8 @@
 package main
 
 import (
+	"encrypt/colors"
 	"encrypt/event"
-	"fmt"
 	"log"
 )
 
@@ -25,5 +25,5 @@ func main()
 		log.Println(err)
 	}
 
-	fmt.Println("\x1b[31m", val)
+	colors.SetColor(val, colors.Cyan)
 }
