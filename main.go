@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encrypt"
 	"encrypt/colors"
 	"encrypt/event"
 	"log"
