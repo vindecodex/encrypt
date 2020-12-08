@@ -2,7 +2,7 @@ package encrypt
 
 import "encrypt/colors"
 
-func banner() {
+func Banner() {
 	colors.Blue("GGGGGGGGGG                                             GGG    ")
 	colors.Blue("GGG                                                    GGG    ")
 	colors.Blue("GGG                                                    GGG    ")
