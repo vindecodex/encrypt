@@ -7,17 +7,17 @@ import (
 )
 
 func init() {
-	colors.Blue("GGGGGGGGGG                                             GGG    ")
-	colors.Blue("GGG                                                    GGG    ")
-	colors.Blue("GGG                                                    GGG    ")
-	colors.Blue("GGGGGGG    GGGGGb.   .dGGGGb GGGdGGG GGG  GGG GGGGGb.  GGGGGG ")
-	colors.Blue("GGG        GGG  GGb dGGP     GGGP    GGG  GGG GGG  GGb GGG    ")
-	colors.Blue("GGG        GGG  GGG GGG      GGG     GGG  GGG GGG  GGG GGG    ")
-	colors.Blue("GGG        GGG  GGG YGGb.    GGG     YGGb GGG GGG dGGP YGGb.  ")
-	colors.Blue("GGGGGGGGGG GGG  GGG   YGGGGP GGG       YGGGGG GGGGGP     YGGG ")
-	colors.Blue("                                          GGG GGG             ")
-	colors.Blue("                                     YGb dGGP GGG             ")
-	colors.Blue("                                       YGGP   GGG             ")
+	colors.SetColor("GGGGGGGGGG                                             GGG    ", colors.Blue)
+	colors.SetColor("GGG                                                    GGG    ", colors.Blue)
+	colors.SetColor("GGG                                                    GGG    ", colors.Blue)
+	colors.SetColor("GGGGGGG    GGGGGb.   .dGGGGb GGGdGGG GGG  GGG GGGGGb.  GGGGGG ", colors.Blue)
+	colors.SetColor("GGG        GGG  GGb dGGP     GGGP    GGG  GGG GGG  GGb GGG    ", colors.Blue)
+	colors.SetColor("GGG        GGG  GGG GGG      GGG     GGG  GGG GGG  GGG GGG    ", colors.Blue)
+	colors.SetColor("GGG        GGG  GGG YGGb.    GGG     YGGb GGG GGG dGGP YGGb.  ", colors.Blue)
+	colors.SetColor("GGGGGGGGGG GGG  GGG   YGGGGP GGG       YGGGGG GGGGGP     YGGG ", colors.Blue)
+	colors.SetColor("                                          GGG GGG             ", colors.Blue)
+	colors.SetColor("                                     YGb dGGP GGG             ", colors.Blue)
+	colors.SetColor("                                       YGGP   GGG             ", colors.Blue)
 }
 
 func main() {
