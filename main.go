@@ -1,12 +1,18 @@
 package main
 
 import (
+	"encrypt/colors"
 	"encrypt/event"
-	"fmt"
+	"encrypt/screens"
 	"log"
 )
 
-func main() 
+func init() {
+	screens.Clear()
+	screens.Banner()
+}
+
+func main() {
 	data := "Hello, World! New World! Lorem Ipsum!"
 	passphrase := "secret"
 	fileName := "test"
@@ -25,5 +31,5 @@ func main()
 		log.Println(err)
 	}
 
-	fmt.Println(val)
+	colors.SetColor(val, colors.Green)
 }
