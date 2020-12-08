@@ -1,5 +1,10 @@
 package colors
 
+import (
+	"fmt"
+	"strconv"
+)
+
 const (
 	Red     = 31
 	Green   = 32
@@ -10,5 +15,7 @@ const (
 	White   = 37
 )
 
-func SetColor() {
+func SetColor(str string, c int) {
+	color := "\x1b[" + strconv.Itoa(c) + "m"
+	fmt.Println(color, str)
 }
