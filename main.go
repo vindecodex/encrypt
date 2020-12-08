@@ -25,5 +25,5 @@ func main()
 		log.Println(err)
 	}
 
-	colors.SetColor(val, colors.Cyan)
+	colors.SetColor(val, colors.Green)
 }
