@@ -16,7 +16,7 @@ func init() {
 func main() {
 	var cls string
 	for cls != "close" {
-		fmt.Print("encrypt")
+		fmt.Print("encrypt: ")
 		fmt.Scanln(&cls)
 	}
 	data := "Hello, World! New World! Lorem Ipsum!"
