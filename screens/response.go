@@ -1,7 +1,7 @@
 package screens
 
-import "fmt"
+import "encrypt/colors"
 
 func Response(res string) {
-	fmt.Print(res)
+	colors.SetColor(res, colors.Blue)
 }
