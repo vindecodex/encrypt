@@ -14,10 +14,16 @@ func init() {
 }
 
 func main() {
-	var cls string
-	for cls != "close" {
+	var ans string
+	for ans != "close" {
 		screens.Response("encrypt: ")
-		fmt.Scanln(&cls)
+		fmt.Scanln(&ans)
+		val, err := event.Read("./test.enc", ans)
+		if err != nil {
+			colors.SetColor("Invalid Passphrase!", colors.Red)
+			continue
+		}
+		colors.SetColor(val, colors.Green)
 	}
 	data := "Hello, World! New World! Lorem Ipsum!"
 	passphrase := "secret"
