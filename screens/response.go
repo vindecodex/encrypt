@@ -10,5 +10,5 @@ func Input(input interface{}) {
 	fmt.Scanln(input)
 }
 func Response(res string) {
-	colors.SetColorLn(res, colors.Blue)
+	colors.SetColorln(res, colors.Blue)
 }
