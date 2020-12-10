@@ -4,7 +4,6 @@ import (
 	"encrypt/colors"
 	"encrypt/event"
 	"encrypt/screens"
-	"fmt"
 	"log"
 )
 
@@ -16,8 +15,7 @@ func init() {
 func main() {
 	var ans string
 	for ans != "close" {
-		screens.Response("encrypt: ")
-		fmt.Scanln(&ans)
+		screens.Input(&ans)
 		val, err := event.Read("./test.enc", ans)
 		if err != nil {
 			colors.SetColor("Invalid Passphrase!", colors.Red)
