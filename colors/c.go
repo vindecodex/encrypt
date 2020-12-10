@@ -17,5 +17,10 @@ const (
 
 func SetColor(str string, c int) {
 	color := "\x1b[" + strconv.Itoa(c) + "m"
+	fmt.Print(color, str)
+}
+
+func SetColorLn(str string, c int) {
+	color := "\x1b[" + strconv.Itoa(c) + "m"
 	fmt.Println(color, str)
 }
