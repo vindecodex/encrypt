@@ -1,7 +1,12 @@
 package screens
 
-import "encrypt/colors"
+import (
+	"encrypt/colors"
+)
 
+func Input(input interface{}) {
+	colors.SetColor("encrypt: ", colors.Blue)
+}
 func Response(res string) {
-	colors.SetColor(res, colors.Blue)
+	colors.SetColorLn(res, colors.Blue)
 }
