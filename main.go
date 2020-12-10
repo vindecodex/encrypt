@@ -41,5 +41,5 @@ func main() {
 		log.Println(err)
 	}
 
-	colors.SetColor(val, colors.Green)
+	colors.SetColorln(val, colors.Green)
 }
