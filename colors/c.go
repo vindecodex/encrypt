@@ -20,7 +20,7 @@ func SetColor(str string, c int) {
 	fmt.Print(color, str)
 }
 
-func SetColorLn(str string, c int) {
+func SetColorln(str string, c int) {
 	color := "\x1b[" + strconv.Itoa(c) + "m"
 	fmt.Println(color, str)
 }
