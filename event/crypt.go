@@ -7,6 +7,7 @@ import (
 	"crypto/rand"
 	"encoding/hex"
 	"io"
+	"log"
 )
 
 // To create 32 character passphrase
@@ -21,11 +22,13 @@ func Encrypt(data []byte, passphrase string) []byte {
 	block, _ := aes.NewCipher([]byte(createHash(passphrase)))
 	gcm, err := cipher.NewGCM(block)
 	if err != nil {
-		panic(err.Error())
+		// panic(err.Error())
+		log.Println(err.Error())
 	}
 	nonce := make([]byte, gcm.NonceSize())
 	if _, err = io.ReadFull(rand.Reader, nonce); err != nil {
-		panic(err.Error())
+		// panic(err.Error())
+		log.Println(err.Error())
 	}
 	cipherText := gcm.Seal(nonce, nonce, data, nil)
 	return cipherText
@@ -36,17 +39,20 @@ func Decrypt(data []byte, passphrase string) []byte {
 	key := []byte(createHash(passphrase))
 	block, err := aes.NewCipher(key)
 	if err != nil {
-		panic(err.Error())
+		// panic(err.Error())
+		log.Println(err.Error())
 	}
 	gcm, err := cipher.NewGCM(block)
 	if err != nil {
-		panic(err.Error())
+		// panic(err.Error())
+		log.Println(err.Error())
 	}
 	nonceSize := gcm.NonceSize()
 	nonce, cipherText := data[:nonceSize], data[nonceSize:]
 	plainText, err := gcm.Open(nil, nonce, cipherText, nil)
 	if err != nil {
-		panic(err.Error())
+		// panic(err.Error())
+		log.Println(err.Error())
 	}
 	return plainText
 }
