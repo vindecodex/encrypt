@@ -21,7 +21,7 @@ func main() {
 			colors.SetColor("Invalid Passphrase!", colors.Red)
 			continue
 		}
-		colors.SetColor(val, colors.Green)
+		colors.SetColorln(val, colors.Green)
 	}
 	data := "Hello, World! New World! Lorem Ipsum!"
 	passphrase := "secret"
