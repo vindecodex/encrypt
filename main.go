@@ -18,10 +18,10 @@ func main() {
 		screens.Input(&ans)
 		val, err := event.Read("./test.enc", ans)
 		if err != nil {
-			colors.SetColor("Invalid Passphrase!", colors.Red)
+			colors.SetColorln("Invalid Passphrase!", colors.Red)
 			continue
 		}
-		colors.SetColor(val, colors.Green)
+		colors.SetColorln(val, colors.Green)
 	}
 	data := "Hello, World! New World! Lorem Ipsum!"
 	passphrase := "secret"
@@ -31,7 +31,12 @@ func main() {
 		log.Println(err)
 	}
 
-	_, err = event.Write(f, event.Encrypt([]byte(data), passphrase))
+	encryptedData, err := event.Encrypt([]byte(data), passphrase)
+	if err != nil {
+		log.Println(err)
+	}
+
+	_, err = event.Write(f, encryptedData)
 	if err != nil {
 		log.Println(err)
 	}

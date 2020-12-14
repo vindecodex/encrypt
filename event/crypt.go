@@ -18,34 +18,38 @@ func createHash(key string) string {
 }
 
 // Encrypt data with our passphrase
-func Encrypt(data []byte, passphrase string) []byte {
+func Encrypt(data []byte, passphrase string) ([]byte, error) {
 	block, _ := aes.NewCipher([]byte(createHash(passphrase)))
 	gcm, err := cipher.NewGCM(block)
 	if err != nil {
 		// panic(err.Error())
 		log.Println(err.Error())
+		return nil, err
 	}
 	nonce := make([]byte, gcm.NonceSize())
 	if _, err = io.ReadFull(rand.Reader, nonce); err != nil {
 		// panic(err.Error())
 		log.Println(err.Error())
+		return nil, err
 	}
 	cipherText := gcm.Seal(nonce, nonce, data, nil)
-	return cipherText
+	return cipherText, nil
 }
 
 // Decrypt data with our passphrase
-func Decrypt(data []byte, passphrase string) []byte {
+func Decrypt(data []byte, passphrase string) ([]byte, error) {
 	key := []byte(createHash(passphrase))
 	block, err := aes.NewCipher(key)
 	if err != nil {
 		// panic(err.Error())
 		log.Println(err.Error())
+		return nil, err
 	}
 	gcm, err := cipher.NewGCM(block)
 	if err != nil {
 		// panic(err.Error())
 		log.Println(err.Error())
+		return nil, err
 	}
 	nonceSize := gcm.NonceSize()
 	nonce, cipherText := data[:nonceSize], data[nonceSize:]
@@ -53,6 +57,7 @@ func Decrypt(data []byte, passphrase string) []byte {
 	if err != nil {
 		// panic(err.Error())
 		log.Println(err.Error())
+		return nil, err
 	}
-	return plainText
+	return plainText, nil
 }

@@ -12,7 +12,13 @@ func Read(filePath string, passphrase string) (string, error) {
 		return "error:12", err
 	}
 
-	value := string(Decrypt(data, passphrase))
+	value, err := Decrypt(data, passphrase)
+	if err != nil {
+		log.Println(err)
+		return "error:18", err
+	}
 
-	return value, nil
+	decryptedValue := string(value)
+
+	return decryptedValue, nil
 }
