@@ -33,7 +33,12 @@ func main() {
 		log.Println(err)
 	}
 
-	_, err = event.Write(f, event.Encrypt([]byte(data), passphrase))
+	encryptedData, err := event.Encrypt([]byte(data), passphrase)
+	if err != nil {
+		log.Println(err)
+	}
+
+	_, err = event.Write(f, encryptedData)
 	if err != nil {
 		log.Println(err)
 	}
