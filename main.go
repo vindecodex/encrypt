@@ -18,6 +18,7 @@ func main() {
 	for ans != "close" {
 		screens.Input(&ans)
 		val, err := event.Read("./test.enc", ans)
+		log.Println("@a")
 		if err != nil {
 			fmt.Println("@")
 			colors.SetColorln("Invalid Passphrase!", colors.Red)
