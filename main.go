@@ -18,7 +18,7 @@ func main() {
 		screens.Input(&ans)
 		val, err := event.Read("./test.enc", ans)
 		if err != nil {
-			colors.SetColor("Invalid Passphrase!", colors.Red)
+			colors.SetColorln("Invalid Passphrase!", colors.Red)
 			continue
 		}
 		colors.SetColorln(val, colors.Green)
