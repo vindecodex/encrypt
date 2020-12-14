@@ -8,9 +8,9 @@ import (
 
 func Read(filePath string, passphrase string) (string, error) {
 	data, err := ioutil.ReadFile(filePath)
-	fmt.Println("@@@@@@@@@@@")
 	if err != nil {
 		log.Println(err)
+		fmt.Println("@@@@@@@@@@@")
 		return "error:12", err
 	}
 
