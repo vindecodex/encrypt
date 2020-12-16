@@ -1,8 +1,12 @@
 package event
 
-import "fmt"
+import "encrypt/screens"
 
 func Listen(cmd string) bool {
-	fmt.Println(cmd)
+	switch cmd {
+	case "clear":
+		screens.Clear()
+		return true
+	}
 	return true
 }
