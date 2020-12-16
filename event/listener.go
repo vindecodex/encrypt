@@ -8,5 +8,5 @@ func Listen(cmd string) bool {
 		screens.Clear()
 		return true
 	}
-	return true
+	return false
 }
