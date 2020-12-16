@@ -1,4 +1,8 @@
 package event
 
-func Listen(cmd string) {
+import "fmt"
+
+func Listen(cmd string) bool {
+	fmt.Println(cmd)
+	return true
 }
