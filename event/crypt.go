@@ -42,7 +42,7 @@ func Decrypt(data []byte, passphrase string) ([]byte, error) {
 	block, err := aes.NewCipher(key)
 	if err != nil {
 		// panic(err.Error())
-		log.Println(err.Error())
+		log.Println(err.Error(), "@")
 		return nil, err
 	}
 	gcm, err := cipher.NewGCM(block)
