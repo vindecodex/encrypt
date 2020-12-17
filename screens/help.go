@@ -2,13 +2,15 @@ package screens
 
 import "encrypt/colors"
 
-var Help = map[string]string{
+type CMD string
+
+var Help = map[CMD]string{
 	"-help": "[ Gives available commands ]",
 }
 
 func ShowCommands() {
 	for k, v := range Help {
-		text := k + " > " + v
+		text := string(k + " > " + v)
 		colors.SetColorln(text, colors.White)
 	}
 }
