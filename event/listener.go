@@ -7,6 +7,7 @@ func Listen(cmd string) bool {
 	case "clear":
 		screens.Clear()
 		return true
+	default:
+		return true
 	}
-	return false
 }
