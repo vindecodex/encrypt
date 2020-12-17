@@ -1,5 +1,3 @@
 package screens
 
-type Commands struct {
-	help: "-help",
-}
+var Help map[string]string
