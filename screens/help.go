@@ -2,9 +2,9 @@ package screens
 
 import "encrypt/colors"
 
-const Help = map[string]string{
+const Help = make(map[string]string{
 	"-help": "[ Gives available commands ]",
-}
+})
 
 func ShowCommands() {
 	for k, v := range Help {
