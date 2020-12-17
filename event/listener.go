@@ -10,7 +10,7 @@ func Listen(cmd string) bool {
 	case "clear":
 		screens.Clear()
 		return true
-	case "-help":
+	case "help":
 		colors.SetColorln("Available Commands: ", colors.White)
 		screens.ShowCommands()
 		return true
