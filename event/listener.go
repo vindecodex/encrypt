@@ -1,6 +1,9 @@
 package event
 
-import "encrypt/screens"
+import (
+	"encrypt/colors"
+	"encrypt/screens"
+)
 
 func Listen(cmd string) bool {
 	switch cmd {
@@ -8,6 +11,7 @@ func Listen(cmd string) bool {
 		screens.Clear()
 		return true
 	default:
+		colors.SetColorln("Unknown Command: -help [ for helpful commands ]", colors.White)
 		return true
 	}
 }
