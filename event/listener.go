@@ -15,7 +15,7 @@ func Listen(cmd string) bool {
 		screens.ShowCommands()
 		return true
 	default:
-		colors.SetColorln("Unknown Command: -help [ for helpful commands ]", colors.White)
+		colors.SetColorln("Unknown Command: help [ for helpful commands ]", colors.White)
 		return true
 	}
 }
