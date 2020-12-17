@@ -8,6 +8,7 @@ var Help = map[string]string{
 
 func ShowCommands() {
 	for k, v := range Help {
-		colors.SetColorln(k, " > ", v)
+		text := k + " > " + v
+		colors.SetColorln(text, colors.White)
 	}
 }
