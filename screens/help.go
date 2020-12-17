@@ -3,7 +3,7 @@ package screens
 import "encrypt/colors"
 
 var Help = map[string]string{
-	"-help": "[ Gives available commands ]",
+	"help":  "[ Gives available commands ]",
 	"close": "[ End encrypt process ]",
 }
 
