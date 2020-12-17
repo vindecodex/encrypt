@@ -12,6 +12,7 @@ func Listen(cmd string) bool {
 		return true
 	case "-help":
 		colors.SetColorln("Available Commands: ", colors.White)
+		screens.ShowCommands()
 		return true
 	default:
 		colors.SetColorln("Unknown Command: -help [ for helpful commands ]", colors.White)
