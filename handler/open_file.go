@@ -1,4 +1,7 @@
 package handler
 
-func OpenFile(passphrase string) {
+import "fmt"
+
+func OpenFile() {
+	fmt.Println("OPEN")
 }
