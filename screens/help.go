@@ -6,6 +6,7 @@ var help = map[string]string{
 	"help":  "[ Gives available commands ]",
 	"close": "[ End encrypt process ]",
 	"clear": "[ Clear the terminal ]",
+	"open":  "[ Open a file ]",
 }
 
 func ShowCommands() {
