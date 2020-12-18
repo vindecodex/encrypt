@@ -19,7 +19,8 @@ func Listen(cmd string) bool {
 		handler.OpenFile()
 		return true
 	default:
-		colors.SetColorln("Unknown Command: help [ for helpful commands ]", colors.White)
+		colors.SetColor("Unknown Command", colors.Red)
+		colors.SetColorln(": help [ for helpful commands ]", colors.White)
 		return true
 	}
 }
