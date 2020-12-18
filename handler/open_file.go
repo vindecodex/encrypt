@@ -8,5 +8,5 @@ import (
 func OpenFile(cmd *string) {
 	colors.SetColor("File: ", colors.Blue)
 	fmt.Scanln(cmd)
-	fmt.Println(cmd)
+	fmt.Println(*cmd)
 }
