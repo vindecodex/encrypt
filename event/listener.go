@@ -14,6 +14,8 @@ func Listen(cmd string) bool {
 	case "clear":
 		screens.Clear()
 		return true
+	case "open":
+		return true
 	default:
 		colors.SetColorln("Unknown Command: help [ for helpful commands ]", colors.White)
 		return true
