@@ -16,7 +16,7 @@ func Listen(cmd *string) bool {
 		screens.Clear()
 		return true
 	case "open":
-		handler.OpenFile()
+		handler.OpenFile(cmd)
 		return true
 	default:
 		colors.SetColor("Unknown Command", colors.Red)
