@@ -16,7 +16,7 @@ func main() {
 	var ans string
 	for ans != "close" {
 		screens.Input(&ans)
-		if event.Listen(ans) {
+		if event.Listen(&ans) {
 			continue
 		}
 	}
