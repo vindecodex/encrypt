@@ -5,6 +5,7 @@ import "encrypt/colors"
 var Help = map[string]string{
 	"help":  "[ Gives available commands ]",
 	"close": "[ End encrypt process ]",
+	"clear": "[ Clear the terminal ]",
 }
 
 func ShowCommands() {
