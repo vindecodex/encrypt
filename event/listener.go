@@ -4,7 +4,7 @@ import "fmt"
 
 func Listen(cmd *string) bool {
 
-	fmt.Println(cmd)
+	fmt.Println(*cmd)
 	return true
 	// switch cmd {
 	// case "help":
