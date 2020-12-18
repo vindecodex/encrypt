@@ -1,7 +1,7 @@
 package handler
 
-import "fmt"
+import "encrypt/colors"
 
 func OpenFile() {
-	fmt.Println("OPEN")
+	colors.SetColor("File: ", colors.Blue)
 }
