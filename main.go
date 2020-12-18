@@ -19,12 +19,6 @@ func main() {
 		if event.Listen(ans) {
 			continue
 		}
-		val, err := event.Read("./test.enc", ans)
-		if err != nil {
-			colors.SetColorln("Invalid Passphrase!", colors.Red)
-			continue
-		}
-		colors.SetColorln(val, colors.Green)
 	}
 	data := "Hello, World! New World! Lorem Ipsum!"
 	passphrase := "secret"
