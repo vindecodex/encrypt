@@ -12,6 +12,7 @@ func OpenFile(cmd *string) (string, error) {
 	fmt.Scanln(cmd)
 	file := *cmd
 	colors.SetColor("Passphrase: ", colors.Blue)
+	fmt.Scanln(cmd)
 	passphrase := *cmd
 
 	val, err := event.Read(file, passphrase)
