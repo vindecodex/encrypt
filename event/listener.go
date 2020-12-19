@@ -2,7 +2,6 @@ package event
 
 import (
 	"encrypt/colors"
-	"encrypt/handler"
 	"encrypt/screens"
 )
 
@@ -16,11 +15,11 @@ func Listen(cmd *string) bool {
 		screens.Clear()
 		return true
 	case "open":
-		val, err := handler.OpenFile(cmd)
-		if err != nil {
-			return false
-		}
-		colors.SetColor(val, colors.Yellow)
+		// val, err := handler.OpenFile(cmd)
+		// if err != nil {
+		// return false
+		// }
+		// colors.SetColor(val, colors.Yellow)
 		return true
 	default:
 		colors.SetColor("Unknown Command", colors.Red)
