@@ -2,7 +2,7 @@ package handler
 
 import (
 	"encrypt/colors"
-	"encrypt/event"
+	"encrypt/service"
 	"fmt"
 	"log"
 )
@@ -15,7 +15,7 @@ func OpenFile(cmd *string) (string, error) {
 	fmt.Scanln(cmd)
 	passphrase := *cmd
 
-	val, err := event.Read(file, passphrase)
+	val, err := service.Read(file, passphrase)
 	if err != nil {
 		log.Println(err)
 		return "", err
