@@ -4,6 +4,7 @@ import (
 	"encrypt/colors"
 	"encrypt/event"
 	"encrypt/screens"
+	"encrypt/service"
 	"log"
 )
 
@@ -23,22 +24,22 @@ func main() {
 	data := "Hello, World! New World! Lorem Ipsum!"
 	passphrase := "secret"
 	fileName := "test"
-	f, err := event.Create(fileName)
+	f, err := service.Create(fileName)
 	if err != nil {
 		log.Println(err)
 	}
 
-	encryptedData, err := event.Encrypt([]byte(data), passphrase)
+	encryptedData, err := service.Encrypt([]byte(data), passphrase)
 	if err != nil {
 		log.Println(err)
 	}
 
-	_, err = event.Write(f, encryptedData)
+	_, err = service.Write(f, encryptedData)
 	if err != nil {
 		log.Println(err)
 	}
 
-	val, err := event.Read("./test.enc", passphrase)
+	val, err := service.Read("./test.enc", passphrase)
 	if err != nil {
 		log.Println(err)
 	}

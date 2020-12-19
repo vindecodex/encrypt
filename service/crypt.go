@@ -1,4 +1,4 @@
-package event
+package service
 
 import (
 	"crypto/aes"

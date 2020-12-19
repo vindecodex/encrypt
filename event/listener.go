@@ -20,7 +20,7 @@ func Listen(cmd *string) bool {
 		if err != nil {
 			return false
 		}
-		colors.SetColor(val, colors.Yellow)
+		colors.SetColorln(val, colors.Yellow)
 		return true
 	default:
 		colors.SetColor("Unknown Command", colors.Red)
