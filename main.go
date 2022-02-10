@@ -1,11 +1,12 @@
 package main
 
 import (
-	"encrypt/colors"
-	"encrypt/event"
-	"encrypt/screens"
-	"encrypt/service"
 	"log"
+
+	"github.com/vindecodex/encrypt/colors"
+	"github.com/vindecodex/encrypt/event"
+	"github.com/vindecodex/encrypt/screens"
+	"github.com/vindecodex/encrypt/service"
 )
 
 func init() {
