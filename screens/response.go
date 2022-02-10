@@ -1,8 +1,9 @@
 package screens
 
 import (
-	"encrypt/colors"
 	"fmt"
+
+	"github.com/vindecodex/encrypt/colors"
 )
 
 func Input(input interface{}) {
