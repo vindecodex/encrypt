@@ -7,3 +7,5 @@ Planning to do something!
 `go build`
 
 `cp encrypt /usr/local/bin`
+
+encrypt
