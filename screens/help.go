@@ -1,6 +1,6 @@
 package screens
 
-import "encrypt/colors"
+import "github.com/vindecodex/encrypt/colors"
 
 var help = map[string]string{
 	"help":  "[ Gives available commands ]",
