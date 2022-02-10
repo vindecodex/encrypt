@@ -1,6 +1,6 @@
 package screens
 
-import "encrypt/colors"
+import "github.com/vindecodex/encrypt/colors"
 
 func Banner() {
 	colors.SetColorln("GGGGGGGGGG                                             GGG    ", colors.Blue)
