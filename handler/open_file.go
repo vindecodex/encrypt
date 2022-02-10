@@ -1,10 +1,11 @@
 package handler
 
 import (
-	"encrypt/colors"
-	"encrypt/service"
 	"fmt"
 	"log"
+
+	"github.com/vindecodex/encrypt/colors"
+	"github.com/vindecodex/encrypt/service"
 )
 
 func OpenFile(cmd *string) (string, error) {
