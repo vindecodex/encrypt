@@ -1,9 +1,9 @@
 package event
 
 import (
-	"encrypt/colors"
-	"encrypt/handler"
-	"encrypt/screens"
+	"github.com/vindecodex/encrypt/colors"
+	"github.com/vindecodex/encrypt/handler"
+	"github.com/vindecodex/encrypt/screens"
 )
 
 func Listen(cmd *string) bool {
